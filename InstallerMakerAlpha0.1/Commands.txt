@@ -1,0 +1,40 @@
+
+                                                       INSTALLER-MAKER-ALPHA-0.1
+TAGS:
+  @start:                                                  : Declares the beginning of script, everything before it is comments.
+  @end.                                                    : Declares the end of script, everything after it is comments.
+  @batch:                                                  : Declares the beginning of batchscript, you can write Batch code after it.
+  @endbatch                                                : Declares the end of batchscript.
+  @text:                                                   : Declares the beginning of text.
+  @endtext                                                 : Declares the end of text.
+  @page: <name>                                            : Declares the beginning of page, you can show it using gotopage command.
+  @endpage                                                 : Declares the end of page.
+  @commands:                                               : Declares the beginning of commands, you can write commands after it.
+  @endcommands                                             : Declares the end of commands.
+  @parameters:                                             : Declares the beginning of parameters, you can write parameters after it.
+  @endparameters                                           : Declares the end of parameters.
+
+!Comment                                                   : Comments are not compiled to Batch.
+
+PARAMETERS:
+  #width: <value>                                          : Sets the width of screen(in chars).
+  #height: <value>                                         : Sets the height of screen(in chars).
+  #color: <value><value2>                                  : Sets the color of background <value> and foreground <value2>.
+  #title: <text>                                           : Sets the title of screen.
+  #charset: <text>                                         : Sets the CODE PAGE NOT CHARSET sorry.
+  
+COMMANDS:
+  gotopage: <page>                                         : Goes to page with name <page>.
+  move: <file> to <path>                                   : Moves file to another path.
+  input: <varname>=<text>                                  : Allows user input text from keyboard after showing them <text> and stores text to <varname>. Use variable in write or if like %varname%.
+  clear                                                    : Clears console.
+  pause                                                    : Waits to user press any key.
+  exit                                                     : Exits.
+  open: <filepath> 	                                       : Opens file.
+  download: <fileurl> as <filename>                        : Downloads file from Internet.
+  if <boolean> then:                                       : If any boolean expression in BATCH!!!
+  endif                                                    : Ends if.
+  write: <text>                                            : Writes text.
+  writeline                                                : Writes empty line.
+
+Everything in <> is BATCH expressions.
