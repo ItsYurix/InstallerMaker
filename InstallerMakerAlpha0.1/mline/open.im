@@ -1,0 +1,6 @@
+(
+ECHO Set WshShell = CreateObject("WScript.Shell"^)
+ECHO WshShell.AppActivate("game.exe"^)
+)> active.vbs
+cscript active.vbs
+del active.vbs

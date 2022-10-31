@@ -1,0 +1,68 @@
+!Downloading programm for my game)))
+
+@start:
+
+  @parameters:
+    #width: 76
+    #height: 22
+    #title: TGW-U_0.2.1Dev_Installer
+    #charset: 65001
+  @endparameters
+
+  @commands:
+    gotopage: p1
+
+    input: download=Download?[Y/N]
+    
+    if %download% equ Y then:
+      input: open=Open After Downloading?[Y/N]
+    endif
+
+    if %download% equ Y then:
+      
+      clear
+      write: Downloading game.pak
+      download: https://docs.google.com/uc?authuser=0&id=1PUU3GHhlbH6IuGFPU5_hUR0ow3FKwzSt&export=download as game.pak
+      write:   game.pak downloaded.
+      writeline
+      write: Downloading game.exe
+      download: https://docs.google.com/uc?authuser=0&id=14YEBej8vtiBcBp8Acs4V5dhwxuL-RdEK&export=download as game.exe
+      write:   game.exe downloaded.
+      
+      if %open% equ Y then:
+        open: game.exe
+      endif
+      
+    endif
+    
+	write: Press any key to close the window.
+	pause
+    exit
+  @endcommands
+
+  @page: p1
+    @text:
+      ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+      ███████████▄─▄█─▄▄█─███─█████─█─███─▄▀█─▄▄█─█─███─▄─███▄▄─███▀─█████████████
+      ████████████─██─█─█─█─█─█▄▄▄█─█─███─█─█─▄▄█─█─███─█─███─▄▄████─█████████████
+      ████████████▄██▄▄▄█▄▄█▄▄█████▄▄▄███▄▄██▄▄▄██▄████▄▄▄█▄█▄▄▄█▄██▄█████████████
+      █▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█
+      █  This programm will download files of TGW-U to this directory.           █
+      █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
+      ▌                                                                          ▐
+      ▌  Name: The Great War - Underground;                                      ▐
+      ▌                                                                          ▐
+      ▌  Version: Dev0.2.1;                                                      ▐
+      ▌                                                                          ▐
+      ▌  Files:                                                                  ▐
+      ▌    game.pak;                                                             ▐
+      ▌    game.exe;                                                             ▐
+      ▌                                                                          ▐
+      ▌  Memory: 2756KB                                                          ▐
+      ▌                                                                          ▐
+      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+	  
+    @endtext
+  @endpage
+
+@end.
